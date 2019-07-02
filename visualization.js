@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Hole den #viz container aus dem DOM mit `d3.select()`
   const container = d3.select("#viz")
-    .attr("fill", "blue")
+  .attr("fill", "blue")
 
 
   // Erstelle eine SVG node mit den Dimensionen `800x600`
@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .enter()
         .append("path")
         .attr("d", d => path(d))
+        .attr('fill', 'rgb(50, 50, 50)');
+
 
 
       // Städtedaten sind in `cities`
@@ -58,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .attr("cx", d => projection([d.lon, d.lat])[0])
             .attr("cy", d => projection([d.lon, d.lat])[1])
             .attr("r", d => d.size)
-            .attr('fill', 'rgba(255, 100, 0, 0.5)');
+            .attr('fill', 'rgba(0, 200, 0, 0.5)');
 
 
           // ========================================
